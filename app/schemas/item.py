@@ -6,3 +6,6 @@ class Item(BaseModel):
     description: Optional[str] = None
     price: float
     tax: Optional[float] = None
+
+    class Config:
+        orm_mode = True

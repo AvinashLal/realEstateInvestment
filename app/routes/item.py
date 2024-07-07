@@ -5,9 +5,9 @@ from app.schemas.item import Item
 router = APIRouter()
 
 # In-memory storage for items
-items = []
+items = [1,2,3]
 
-@router.get("/items/", response_model=List[Item])
+@router.get("/items/", response_model=List[int])
 def read_items(skip: int = 0, limit: int = 10):
     return items[skip: skip + limit]
 
