@@ -5,6 +5,7 @@ from app.api.v1.endpoints import item
 
 
 app = FastAPI()
+app.include_router(item.router, prefix="/items", tags=["items"])
 
 # Mount the static directory to serve static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
