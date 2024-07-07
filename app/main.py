@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.routes import item
+from app.api.v1.endpoints import item
 
 
 app = FastAPI()
